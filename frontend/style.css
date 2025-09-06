@@ -127,20 +127,25 @@ canvas {
 
 /* Zone de chat */
 .chat-container {
-    width: 250px;
+    width: 280px; /* Légèrement plus large pour un meilleur confort de lecture */
+    max-width: 300px; /* Limite maximale pour éviter les débordements */
     display: flex;
     flex-direction: column;
     align-items: stretch;
+    margin: 0 auto; /* Centrage horizontal */
 }
+
 .chat-container h2 {
     text-align: center;
+    margin-bottom: 10px;
 }
 .chat-messages {
     background-color: #ffffff22;
     flex: 1;
     padding: 10px;
     margin-bottom: 10px;
-    height: 200px;
+    height: 180px; /* Réduction de la hauteur pour éviter le débordement */
+    max-height: 200px; /* Limite maximale */
     overflow-y: auto;
     border: 1px solid #fff;
     border-radius: 5px;
@@ -159,16 +164,21 @@ canvas {
 }
 .chat-input-area {
     display: flex;
+    gap: 5px; /* Espacement entre la zone de saisie et le bouton */
 }
 #chat-input {
     flex: 1;
-    padding: 5px;
-    font-size: 1em;
+    padding: 8px; /* Légèrement plus de padding pour un meilleur confort */
+    font-size: 0.9em; /* Taille de police légèrement réduite */
     border: 2px solid #0077b6;
     border-radius: 5px 0 0 5px;
+    min-height: 36px; /* Hauteur minimale pour éviter que la zone ne soit trop petite */
 }
 #send-btn {
+    padding: 0 12px; /* Padding horizontal pour le bouton */
     border-radius: 0 5px 5px 0;
+    min-width: 80px; /* Largeur minimale pour le bouton */
+    font-size: 0.9em; /* Taille de police cohérente avec la zone de saisie */
 }
 
 /* Classe utilitaire pour masquer un élément */
