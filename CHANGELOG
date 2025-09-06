@@ -1,0 +1,21 @@
+# Changelog
+
+Toutes les modifications notables de ce projet seront documentées dans ce fichier.
+
+Le format est basé sur [Keep a Changelog](https://keepachangelog.com/fr/1.0.0/),
+et le projet respecte [Semantic Versioning](https://semver.org/lang/fr/).
+
+---
+
+## [1.0.0] - 2025-09-06
+### Ajouté
+- Version initiale du jeu de bataille navale en ligne.
+- Déploiement public accessible via une URL.
+
+---
+
+## [0.1.0] - 2025-08-20
+### Ajouté
+- Version alpha du jeu
+
+---
