@@ -16,22 +16,10 @@
 
 <body>
 <div id="credit-popup" class="hidden">
-    <span id="close-credit-popup" class="close-popup">&times;</span>
     <img id="credit-image" src="" alt="Crédit">
 </div>
 
 <h1>Jeu de Bataille Navale</h1>
-<div id="paiement" class="paiement-container">
-    <p class="paiement-texte">Soutenez-nous en offrant un café !</p>
-    <div class="paiement-bouton">
-        <script async src="https://js.stripe.com/v3/buy-button.js"></script>
-        <stripe-buy-button
-            buy-button-id="buy_btn_1S8ifoEfgWZVtRPplDR4M0lo"
-            publishable-key="pk_live_51S8he6EfgWZVtRPpHFU7H6cXNf6ifbTZgU6PGkdSC8Ar9kyTKneSXoqSHixm2s5ExQJ6NFSxk2cYvfFxpwMvu21D00ouITnawF"
-        >
-        </stripe-buy-button>
-    </div>
-</div>
 
 <div class="game-container">
     <!-- Grille du joueur -->
@@ -84,6 +72,17 @@
         <div class="chat-input-area">
             <input id="chat-input" type="text" placeholder="Tapez un message..." />
             <button id="send-btn" class="btn">Envoyer</button>
+        </div>
+    </div>
+    <div id="paiement" class="paiement-container">
+        <p class="paiement-texte">Soutenez-nous en nous offrant un café !</p>
+        <div class="paiement-bouton">
+            <script async src="https://js.stripe.com/v3/buy-button.js"></script>
+            <stripe-buy-button
+                buy-button-id="buy_btn_1S8ifoEfgWZVtRPplDR4M0lo"
+                publishable-key="pk_live_51S8he6EfgWZVtRPpHFU7H6cXNf6ifbTZgU6PGkdSC8Ar9kyTKneSXoqSHixm2s5ExQJ6NFSxk2cYvfFxpwMvu21D00ouITnawF"
+            >
+            </stripe-buy-button>
         </div>
     </div>
 </div>
