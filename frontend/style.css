@@ -156,11 +156,11 @@ canvas {
 }
 .chat-msg.self {
     text-align: right;
-    color: #90ee90;    /* vert clair pour soi */
+    color: #70d870;    /* vert clair pour soi */
 }
 .chat-msg.opponent {
     text-align: left;
-    color: #ffcccb;    /* rouge clair pour adversaire */
+    color: #de5a58d7;    /* rouge clair pour adversaire */
 }
 .chat-input-area {
     display: flex;

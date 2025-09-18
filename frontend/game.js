@@ -297,7 +297,7 @@ randomBtn.addEventListener('click', () => {
 rotateBtn.addEventListener('click', () => {
     if (currentOrientation === 'horizontal') {
         currentOrientation = 'vertical';
-        rotateBtn.innerText = "Rotation : Vertical__";
+        rotateBtn.innerText = "Rotation : Vertical";
     } else {
         currentOrientation = 'horizontal';
         rotateBtn.innerText = "Rotation : Horizontal";
