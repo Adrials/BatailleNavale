@@ -372,6 +372,7 @@ window.addEventListener('click', () => {
 
 let currentImage = null;
 
+//Ouverture et fermeture des popups
 document.querySelectorAll('.credit-name').forEach(el => {
     el.addEventListener('click', () => {
         const imgSrc = el.dataset.image;
@@ -394,7 +395,16 @@ document.querySelectorAll('.credit-name').forEach(el => {
     });
 });
 
+// Fermeture de la popup par bouton
 document.getElementById('credit-popup').addEventListener('click', () => {
     document.getElementById('credit-popup').classList.add('hidden');
     currentImage = null;
+});
+
+// Fermeture en cliquant en dehors de l'image
+document.getElementById('credit-popup').addEventListener('click', (e) => {
+    if (e.target === e.currentTarget) {
+        e.currentTarget.classList.add('hidden');
+        currentImage = null;
+    }
 });

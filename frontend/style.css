@@ -228,6 +228,21 @@ canvas {
     display: none;
 }
 
+.close-popup {
+    position: absolute;
+    top: 10px;
+    right: 15px;
+    font-size: 1.5em;
+    color: white;
+    cursor: pointer;
+    background: none;
+    border: none;
+}
+
+.close-popup:hover {
+    color: #ff6b6b;
+}
+
 /* Style pour le conteneur de paiement */
 .paiement-container {
     background-color: rgba(0, 0, 0, 0.6);
