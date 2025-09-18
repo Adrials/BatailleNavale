@@ -372,24 +372,29 @@ window.addEventListener('click', () => {
 
 let currentImage = null;
 
-// Gestion de l'affichage des crédits
-document.querySelectorAll('.credit-name').forEach(name => {
-    name.addEventListener('click', () => {
-        const imgUrl = name.getAttribute('data-image');
-        document.getElementById('credit-image').src = imgUrl;
-        document.getElementById('credit-popup').classList.remove('hidden');
+document.querySelectorAll('.credit-name').forEach(el => {
+    el.addEventListener('click', () => {
+        const imgSrc = el.dataset.image;
+        const popup = document.getElementById('credit-popup');
+        const img = document.getElementById('credit-image');
+
+        if (popup.classList.contains('hidden')) {
+            img.src = imgSrc;
+            popup.classList.remove('hidden');
+            currentImage = imgSrc;
+        } else {
+            if (currentImage === imgSrc) {
+                popup.classList.add('hidden');
+                currentImage = null;
+            } else {
+                img.src = imgSrc;
+                currentImage = imgSrc;
+            }
+        }
     });
 });
 
-// Fermeture de la popup
-document.getElementById('close-credit-popup').addEventListener('click', () => {
+document.getElementById('credit-popup').addEventListener('click', () => {
     document.getElementById('credit-popup').classList.add('hidden');
+    currentImage = null;
 });
-
-// Fermeture en cliquant en dehors de l'image
-document.getElementById('credit-popup').addEventListener('click', (e) => {
-    if (e.target === e.currentTarget) {
-        e.currentTarget.classList.add('hidden');
-    }
-});
-
