@@ -6,6 +6,20 @@
     <title>Bataille Navale</title>
     <link rel="stylesheet" href="style.css" />
 </head>
+
+<div id="paiement">
+    Payez-nous un café !
+    <script async
+    src="https://js.stripe.com/v3/buy-button.js">
+    </script>
+
+    <stripe-buy-button
+    buy-button-id="buy_btn_1S8ifoEfgWZVtRPplDR4M0lo"
+    publishable-key="pk_live_51S8he6EfgWZVtRPpHFU7H6cXNf6ifbTZgU6PGkdSC8Ar9kyTKneSXoqSHixm2s5ExQJ6NFSxk2cYvfFxpwMvu21D00ouITnawF"
+    >
+    </stripe-buy-button>
+</div>
+
 <div id="credits">
     Auteurs :
     <span class="credit-name" data-image="images/djodjo.jpeg">Daulphy</span> &
